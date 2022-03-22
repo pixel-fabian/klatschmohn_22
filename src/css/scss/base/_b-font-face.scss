@@ -36,12 +36,10 @@
   }
 }
 
-
-
 /** Open Sans light **/
 @include font-face(
   'Open Sans',
-  '../assets/fonts/open-sans/',
+  './assets/fonts/open-sans/',
   'open-sans-v18-latin-300',
   300,
   normal
@@ -49,7 +47,7 @@
 /** Open Sans regular **/
 @include font-face(
   'Open Sans',
-  '../assets/fonts/open-sans/',
+  'assets/fonts/open-sans/',
   'open-sans-v18-latin-regular',
   400,
   normal
@@ -57,7 +55,7 @@
 /** Open Sans italic **/
 @include font-face(
   'Open Sans',
-  '../assets/fonts/open-sans/',
+  'assets/fonts/open-sans/',
   'open-sans-v18-latin-italic',
   300,
   italic
@@ -65,7 +63,7 @@
 /** Open Sans bold **/
 @include font-face(
   'Open Sans',
-  '../assets/fonts/open-sans/',
+  'assets/fonts/open-sans/',
   'open-sans-v18-latin-700',
   700,
   normal

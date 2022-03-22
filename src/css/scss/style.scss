@@ -1,3 +1,11 @@
+/*
+Theme Name: Klatschmohn 22
+Theme URI: https://github.com/pixel-fabian/klatschmohn_22
+Description: Wordpress Theme for 'Projekttheater Klatschmohn'
+Version: 0.1.0
+Author: Fabian Kurz
+Author URI: http://fabian-kurz.de
+*/
 // !compileOnSave
 @charset 'UTF-8';
 
@@ -37,5 +45,5 @@
    ========================================================================== */
 
 //Fork-Awesome SCSS
-$fa-font-path: '../assets/fonts/fork-awesome';
+$fa-font-path: './assets/fonts/fork-awesome';
 @import './libs/fork-awesome/fork-awesome.scss';

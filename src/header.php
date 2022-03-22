@@ -108,7 +108,7 @@
         <nav class="nav-main">
           <ul class="nav-main__list">
             <li class="nav-main__item nav-main__item--active">
-              <a href="/" class="nav-main__link">Startseite</a>
+              <a href="/" class="nav-main__link">Startseite22</a>
             </li>
             <li class="nav-main__item">
               <a href="" class="nav-main__link">Programm</a>
