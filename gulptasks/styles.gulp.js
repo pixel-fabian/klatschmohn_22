@@ -23,7 +23,7 @@ const paths = {
  * compile sass
  * inkl. autoprefixer, normalize and sourcemaps
  */
-gulp.task('styles', function () {
+gulp.task('styles', () => {
   return gulp
     .src(paths.sassFile)
     .pipe(sourcemaps.init())
