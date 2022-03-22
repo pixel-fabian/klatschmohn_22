@@ -1,2 +1,3 @@
-# klatschmohn_22
-Wordpress Theme for 'Projekttheater Klatschmohn' 
+# Klatschmohn 22
+
+🚧 A wordpress theme under construction 🚧
