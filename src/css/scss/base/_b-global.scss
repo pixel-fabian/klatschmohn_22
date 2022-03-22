@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color__text);
+  background: var(--color__gray--light);
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--color__secondary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link--effect {
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  transition: color, text-decoration-color 0.3s ease-in-out;
+
+  &:hover {
+    text-decoration-color: rgba(204, 0, 24, 1);
+  }
+}
+
+a > img:only-child {
+  display: block;
+}

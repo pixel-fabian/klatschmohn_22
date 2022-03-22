@@ -1,0 +1,34 @@
+@charset 'UTF-8';
+
+header {
+  background: var(--color__bg);
+  -webkit-box-shadow: var(--background);
+  box-shadow: var(--background);
+  margin-bottom: 20px;
+}
+
+.header__top {
+  display: flex;
+  padding: var(--padding);
+}
+
+.header__logo {
+  max-width: 200px;
+  margin: 0 20px;
+}
+
+.header__right {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.header__title {
+  font-size: 2.4em;
+  margin: 0;
+  color: var(--color__primary);
+}
+
+.header__subtitle {
+  font-size: 1.5em;
+  color: var(--color__primary);
+}

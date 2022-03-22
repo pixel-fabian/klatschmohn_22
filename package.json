@@ -1,0 +1,45 @@
+{
+  "name": "klatschmohn_22",
+  "version": "0.1.0",
+  "description": "A wordpress theme",
+  "main": "index.php",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "lint": "eslint ./src --ext .ts && prettier --check --ignore-path .gitignore ./src/",
+    "lint:fix": "eslint ./src/**/*.ts --fix && prettier --ignore-path .gitignore --write ./src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixel-fabian/klatschmohn_22.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "Fabian Kurz",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/pixel-fabian/klatschmohn_22/issues"
+  },
+  "homepage": "https://projekttheater-klatschmohn.de/",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-recommended": "^4.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "node-normalize-scss": "^8.1.2",
+    "node-sass": "^7.0.1",
+    "prettier": "^2.5.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.5",
+    "webpack": "^5.68.0"
+  }
+}

@@ -1,0 +1,10 @@
+footer {
+  margin-top: 20px;
+  background: var(--color__primary);
+  color: var(--color__primary--contrast);
+  padding: var(--padding);
+  -webkit-box-shadow: var(--background);
+  box-shadow: var(--background);
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,9 @@
+.page {
+  background: var(--color__bg);
+  -webkit-box-shadow: var(--background);
+  box-shadow: var(--background);
+}
+
+.page__content {
+  padding: var(--padding);
+}
