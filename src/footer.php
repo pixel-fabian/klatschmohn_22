@@ -60,7 +60,7 @@
       </footer>
     </div>
 
-    <script src="js/script.js" type="module"></script>
+    <script src="<?php bloginfo( 'template_directory' ); ?>/js/script.js" type="module"></script>
     <?php wp_footer(); ?>
   </body>
 </html>
