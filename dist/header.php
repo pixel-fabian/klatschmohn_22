@@ -105,32 +105,7 @@
             >
           </div>
         </div>
-        <nav class="nav-main">
-          <ul class="nav-main__list">
-            <li class="nav-main__item nav-main__item--active">
-              <a href="/" class="nav-main__link">Startseite</a>
-            </li>
-            <li class="nav-main__item">
-              <a href="" class="nav-main__link">Programm</a>
-            </li>
-            <li class="nav-main__item">
-              <a href="" class="nav-main__link">Besuchen</a>
-            </li>
-            <li class="nav-main__item">
-              <a href="" class="nav-main__link">Mitmachen</a>
-            </li>
-            <li class="nav-main__item">
-              <a href="" class="nav-main__link">Fotos</a>
-            </li>
-            <li class="nav-main__item">
-              <a href="" class="nav-main__link">Videos</a>
-            </li>
-            <li class="nav-main__item">
-              <a href="" class="nav-main__link">Rückblick</a>
-            </li>
-            <li class="nav-main__item">
-              <a href="" class="nav-main__link">Über Klatschmohn</a>
-            </li>
-          </ul>
+        <nav>
+          <?php wp_nav_menu(array('theme_location' => 'nav-desktop', 'container_class' => 'nav-desktop')); ?>
         </nav>
       </header>

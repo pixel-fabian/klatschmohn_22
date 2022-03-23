@@ -1,0 +1,31 @@
+.nav-desktop {
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .menu-item {
+    background: var(--color__primary);
+    padding: 7px 10px;
+    transition: background 0.3s;
+    cursor: pointer;
+    width: 12.5%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &.current-menu-item,
+    &:hover {
+      background: var(--color__secondary);
+    }
+  }
+
+  .menu-item a {
+    color: var(--color__primary--contrast);
+    text-decoration: none;
+    font-weight: 400;
+  }
+}

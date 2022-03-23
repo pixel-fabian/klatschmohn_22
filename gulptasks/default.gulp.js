@@ -10,7 +10,7 @@ gulp.task('clean', () => {
 gulp.task(
   'default',
   gulp.series(
-    ['clean', 'html', 'php', 'styles', 'webpack', 'assets', 'watch'],
+    ['html', 'php', 'styles', 'webpack', 'assets', 'watch'],
     () => {},
   ),
 );
@@ -19,7 +19,7 @@ gulp.task(
 gulp.task(
   'build',
   gulp.series(
-    ['clean', 'html', 'php', 'styles', 'webpack-prod', 'assets'],
+    ['html', 'php', 'styles', 'webpack-prod', 'assets'],
     (callback) => {
       callback();
     },
