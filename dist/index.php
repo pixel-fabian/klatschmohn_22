@@ -2,25 +2,15 @@
 <div class="content">
   <main>
     <div class="page">
-      <img
-        class="page__img"
-        src="assets/img/klatschmohn_titelbild2.jpg"
-        alt=""
-      />
-      <div class="page__content">
-        <h2>Klatschmohn 2022</h2>
-        <p>
-          Das nächste KLATSCHMOHN findet vom
-          <strong>6. bis 8. Juli 2022</strong> im Kulturzentrum Pavillon
-          statt!
-        </p>
-        <p>
-          Das inklusive Theaterfestival gibt Kindern, Jugendlichen und
-          Erwachsenen mit und ohne Handicap die Möglichkeit, ihre
-          musisch-kreativen Fähigkeiten einer breiten Öffentlichkeit
-          vorzustellen.
-        </p>
-      </div>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <h2 class="page__title"><?php the_title(); ?></h2>
+        <div class="page__content">
+            <?php the_content(); ?>
+        </div>
+      <?php endwhile; ?>
+      <?php else: ?>
+        <p>Tut uns leid, es wurde kein passender Beitrag gefunden.</p>
+      <?php endif; ?>
     </div>
 
     <section class="teaser-section">
