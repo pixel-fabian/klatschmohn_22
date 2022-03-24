@@ -84,6 +84,10 @@ Author URI: http://fabian-kurz.de
           box-sizing: border-box;
 }
 
+*:focus {
+  outline: 2px dotted var(--color__secondary);
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: var(--color__text);
@@ -238,6 +242,10 @@ header {
   margin-right: 5px;
 }
 
+.nav-desktop {
+  /** 2nd level */
+}
+
 .nav-desktop .menu {
   list-style-type: none;
   margin: 0;
@@ -248,32 +256,59 @@ header {
 }
 
 .nav-desktop .menu-item {
-  background: var(--color__primary);
-  padding: 7px 10px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-desktop .menu-item a {
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
-  cursor: pointer;
-  width: 12.5%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background: var(--color__primary);
+  color: var(--color__primary--contrast);
+  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.nav-desktop .menu-item.current-menu-item, .nav-desktop .menu-item:hover {
+.nav-desktop .menu-item a:hover, .nav-desktop .menu-item a:focus {
   background: var(--color__secondary);
 }
 
-.nav-desktop .menu-item a {
-  color: var(--color__primary--contrast);
-  text-decoration: none;
-  font-weight: 400;
+.nav-desktop .sub-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.nav-desktop .sub-menu .menu-item {
+  display: none;
+  position: relative;
+}
+
+.nav-desktop .menu-item-has-children:hover .sub-menu .menu-item,
+.nav-desktop .menu-item-has-children.expanded .sub-menu .menu-item {
+  display: block;
+  top: 0;
 }
 
 .page {

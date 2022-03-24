@@ -7,25 +7,48 @@
   }
 
   .menu-item {
-    background: var(--color__primary);
-    padding: 7px 10px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-item a {
     transition: background 0.3s;
-    cursor: pointer;
-    width: 12.5%;
-    align-items: center;
+    background: var(--color__primary);
+    color: var(--color__primary--contrast);
+    font-weight: 400;
     display: flex;
+    align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 
-    &.current-menu-item,
-    &:hover {
+    &:hover,
+    &:focus {
       background: var(--color__secondary);
     }
   }
 
-  .menu-item a {
-    color: var(--color__primary--contrast);
-    text-decoration: none;
-    font-weight: 400;
+  /** 2nd level */
+  .sub-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sub-menu .menu-item {
+    display: none;
+    position: relative;
+  }
+
+  .menu-item-has-children:hover .sub-menu .menu-item,
+  .menu-item-has-children.expanded .sub-menu .menu-item {
+    display: block;
+    top: 0;
   }
 }

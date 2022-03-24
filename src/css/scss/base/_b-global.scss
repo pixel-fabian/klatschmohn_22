@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: 2px dotted var(--color__secondary);
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: var(--color__text);
