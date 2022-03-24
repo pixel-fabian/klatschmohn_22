@@ -1,3 +1,3 @@
-import ColorChange from './modules/colorChange';
+import Menu from './modules/menu';
 
-new ColorChange('.box__title');
+new Menu('.nav-desktop');
