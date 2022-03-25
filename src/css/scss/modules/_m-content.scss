@@ -1,13 +1,13 @@
-.page {
+.content {
   background: var(--color__bg);
   -webkit-box-shadow: var(--background);
   box-shadow: var(--background);
 }
 
-.page__title {
+.content__title {
   padding: var(--padding);
 }
 
-.page__content {
+.content__content {
   padding: var(--padding);
 }

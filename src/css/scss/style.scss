@@ -23,7 +23,6 @@ Author URI: http://fabian-kurz.de
    Layout - styles defining the layout of the page
    ========================================================================== */
 
-@import './layout/_l-content.scss';
 @import './layout/_l-footer.scss';
 @import './layout/_l-header.scss';
 
@@ -31,10 +30,10 @@ Author URI: http://fabian-kurz.de
    Modules - independent modules, that can be used multiple times
    ========================================================================== */
 
+@import './modules/_m-content.scss';
 @import './modules/_m-form.scss';
 @import './modules/_m-nav-footer.scss';
 @import './modules/_m-nav-desktop.scss';
-@import './modules/_m-page.scss';
 @import './modules/_m-side-box.scss';
 @import './modules/_m-teaser.scss';
 @import './modules/_m-wp-gallery.scss';

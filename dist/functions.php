@@ -22,8 +22,9 @@ add_action('init', 'register_my_menus');
 
 /* Thumbnail-Support */
 add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 400, 300 );
 
-/* Thumbnail-Support */
+/* Excerpt Length */
 function custom_excerpt_length( $length ) {
     return 30;
 }

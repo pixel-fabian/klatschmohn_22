@@ -95,6 +95,10 @@ body {
   margin: 0;
 }
 
+main {
+  width: 100%;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -133,19 +137,6 @@ a > img:only-child {
 /* ==========================================================================
    Layout - styles defining the layout of the page
    ========================================================================== */
-.content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-aside {
-  width: 300px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  margin-right: 20px;
-}
-
 footer {
   margin-top: 20px;
   background: var(--color__primary);
@@ -199,6 +190,20 @@ header {
 /* ==========================================================================
    Modules - independent modules, that can be used multiple times
    ========================================================================== */
+.content {
+  background: var(--color__bg);
+  -webkit-box-shadow: var(--background);
+  box-shadow: var(--background);
+}
+
+.content__title {
+  padding: var(--padding);
+}
+
+.content__content {
+  padding: var(--padding);
+}
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,20 +314,6 @@ header {
 .nav-desktop .menu-item-has-children.expanded .sub-menu .menu-item {
   display: block;
   top: 0;
-}
-
-.page {
-  background: var(--color__bg);
-  -webkit-box-shadow: var(--background);
-  box-shadow: var(--background);
-}
-
-.page__title {
-  padding: var(--padding);
-}
-
-.page__content {
-  padding: var(--padding);
 }
 
 .side-box {

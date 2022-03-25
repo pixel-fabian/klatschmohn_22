@@ -1,3 +1,9 @@
+<?php
+/*
+  Template Name: Startseite
+ */
+?>
+
 <?php get_header(); ?>
   <main>
     <div class="content">
@@ -11,5 +17,17 @@
         <p>Tut uns leid, es wurde kein passender Beitrag gefunden.</p>
       <?php endif; ?>
     </div>
+
+    <section class="teaser-section">
+      <?php
+        $args = array(
+          'numberposts' => 6,
+        );
+        $posts = get_posts( $args );
+        foreach( $posts as $post ) :  setup_postdata($post);
+          get_template_part('template-parts/teaser');
+        endforeach; wp_reset_postdata();
+      ?>
+    </section>
   </main>
 <?php get_footer(); ?>
