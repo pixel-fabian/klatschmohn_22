@@ -2,12 +2,13 @@
   background: var(--color__bg);
   -webkit-box-shadow: var(--background);
   box-shadow: var(--background);
+  padding: var(--padding);
 }
 
 .content__title {
-  padding: var(--padding);
+  margin-bottom: var(--padding);
 }
 
 .content__text {
-  padding: var(--padding);
+  margin-bottom: var(--padding);
 }

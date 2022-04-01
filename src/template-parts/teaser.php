@@ -11,10 +11,12 @@
         <?php the_excerpt(); ?>
       </div>
     </a>
-    <div class="teaser__meta">
-      <span
-        >Kategorie: <a href="" class="link--effect"><?php get_the_category(); ?></a></span
-      >
-    </div>
+    <?php if (get_the_category($id)[0]->name != 'Uncategorized') { ?>
+      <div class="teaser__meta">
+        <span
+          >Kategorie: <a href="<?php echo esc_url(get_category_link(get_the_category($id)[0]->term_id)) ?>" class="link--effect"><?php echo get_the_category($id)[0]->name ?></a></span
+        >
+      </div>
+    <?php } ?>
   </div>
 </article>
