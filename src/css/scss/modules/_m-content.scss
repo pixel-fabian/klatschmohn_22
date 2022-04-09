@@ -3,6 +3,14 @@
   -webkit-box-shadow: var(--background);
   box-shadow: var(--background);
   padding: var(--padding);
+
+  &--no-padding {
+    padding: 0;
+  }
+}
+
+.content__inner {
+  padding: var(--padding);
 }
 
 .content__title {

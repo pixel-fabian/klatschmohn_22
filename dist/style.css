@@ -197,6 +197,14 @@ header {
   padding: var(--padding);
 }
 
+.content--no-padding {
+  padding: 0;
+}
+
+.content__inner {
+  padding: var(--padding);
+}
+
 .content__title {
   margin-bottom: var(--padding);
 }
