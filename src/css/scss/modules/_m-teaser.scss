@@ -44,14 +44,14 @@
   flex: 1 0 auto;
 }
 .teaser__text {
-  padding: 0 var(--padding);
+  padding: 0 var(--padding--small);
   color: var(--color__text);
   font-weight: 400;
 }
 
 .teaser__title {
-  margin: 10px 0;
-  padding: 0 var(--padding);
+  margin: 20px 0;
+  padding: 0 var(--padding--small);
   color: var(--color__primary);
 }
 
@@ -75,7 +75,7 @@
 }
 
 .teaser__meta {
-  padding: 0 var(--padding);
+  padding: 0 var(--padding--small);
   margin: 20px 0;
   display: flex;
   justify-content: space-between;

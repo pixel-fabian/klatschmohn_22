@@ -2,7 +2,7 @@
   background: var(--color__bg);
   -webkit-box-shadow: var(--background);
   box-shadow: var(--background);
-  padding: var(--padding);
+  padding: var(--padding) var(--padding--wide);
 
   &--no-padding {
     padding: 0;
@@ -10,13 +10,30 @@
 }
 
 .content__inner {
-  padding: var(--padding);
+  padding: var(--padding) var(--padding--wide);
 }
 
 .content__title {
-  margin-bottom: var(--padding);
+  margin-bottom: var(--padding--small);
+  font-size: 2em;
 }
 
-.content__text {
-  margin-bottom: var(--padding);
+/** Tables **/
+.content .wp-block-table {
+  margin: var(--padding) 0;
+}
+
+.content table thead {
+  background-color: var(--color__primary);
+  color: var(--color__primary--contrast);
+}
+
+.content table tr {
+  display: flex;
+}
+
+.content table th,
+.content table td {
+  padding: 10px;
+  flex: 1;
 }
