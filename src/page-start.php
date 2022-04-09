@@ -28,14 +28,41 @@
 
     <section class="teaser-section">
       <?php
-        $args = array(
-          'numberposts' => 6,
-        );
-        $posts = get_posts( $args );
-        foreach( $posts as $post ) :  setup_postdata($post);
+        $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+      
+        $posts = new WP_Query(array(
+          'posts_per_page' => 3,
+          'paged' => $paged,
+        ));
+
+        while ($posts->have_posts()) : $posts->the_post();
           get_template_part('template-parts/teaser');
-        endforeach; wp_reset_postdata();
+        endwhile;
+        
       ?>
     </section>
+
+
+    <div class="pagination">
+      <?php
+        $total_pages = $posts->max_num_pages;
+        if ($total_pages > 1){
+
+          $current_page = max(1, get_query_var('page'));
+  
+          echo paginate_links(array(
+              'base' => get_pagenum_link(1) . '%_%',
+              'format' => '/page/%#%',
+              'current' => $current_page,
+              'total' => $total_pages,
+              'prev_text'    => __('« Vorherige Seite'),
+              'next_text'    => __('Nächste Seite »'),
+          ));
+
+        }
+      ?>
+      <?php wp_reset_postdata(); ?>
+    </div>
+
   </main>
 <?php get_footer(); ?>

@@ -352,6 +352,14 @@ header {
   top: 0;
 }
 
+.pagination {
+  background: var(--color__bg);
+  -webkit-box-shadow: var(--background);
+  box-shadow: var(--background);
+  padding: var(--padding--small);
+  margin-top: 20px;
+}
+
 .side-box {
   margin-top: 20px;
   padding: var(--padding);
