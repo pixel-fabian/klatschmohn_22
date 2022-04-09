@@ -28,7 +28,13 @@
 
     <section class="teaser-section">
       <?php
-        $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+        if ( get_query_var( 'paged' ) ) {
+          $paged = get_query_var( 'paged' );
+        } elseif ( get_query_var( 'page' ) ) {
+          $paged = get_query_var( 'page' );
+        } else {
+          $paged = 1;
+        }
       
         $posts = new WP_Query(array(
           'posts_per_page' => 3,
@@ -48,7 +54,7 @@
         $total_pages = $posts->max_num_pages;
         if ($total_pages > 1){
 
-          $current_page = max(1, get_query_var('page'));
+          $current_page = max(1, $paged);
   
           echo paginate_links(array(
               'base' => get_pagenum_link(1) . '%_%',
