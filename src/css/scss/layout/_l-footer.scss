@@ -1,5 +1,4 @@
 footer {
-  margin-top: 20px;
   background: var(--color__primary);
   color: var(--color__primary--contrast);
   padding: var(--padding);
@@ -7,4 +6,9 @@ footer {
   box-shadow: var(--background);
   display: flex;
   justify-content: space-between;
+  margin: var(--margin--small) var(--margin--small) 0;
+
+  @include atLarge {
+    margin: var(--margin) 0 0;
+  }
 }

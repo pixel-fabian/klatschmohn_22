@@ -22,7 +22,7 @@ add_action('init', 'register_my_menus');
 
 /* Thumbnail-Support */
 add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 400, 300 );
+set_post_thumbnail_size( 520, 350 );
 add_image_size( 'full-width', 1200, 400 );
 
 /* Excerpt Length */

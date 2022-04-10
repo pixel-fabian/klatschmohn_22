@@ -2,10 +2,18 @@
   background: var(--color__bg);
   -webkit-box-shadow: var(--background);
   box-shadow: var(--background);
-  padding: var(--padding) var(--padding--wide);
+  padding: var(--padding--small);
+  margin: 0 var(--margin--small);
 
   &--no-padding {
     padding: 0;
+  }
+
+  @include atMedium {
+    padding: var(--padding) var(--padding--wide);
+  }
+  @include atLarge {
+    margin: 0;
   }
 }
 

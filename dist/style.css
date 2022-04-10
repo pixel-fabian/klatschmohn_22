@@ -22,6 +22,8 @@ Author URI: http://fabian-kurz.de
   --padding: 50px;
   --padding--small: 25px;
   --padding--wide: 100px;
+  --margin: 20px;
+  --margin--small: 10px;
   --background: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
 }
 
@@ -144,7 +146,6 @@ p {
    Layout - styles defining the layout of the page
    ========================================================================== */
 footer {
-  margin-top: 20px;
   background: var(--color__primary);
   color: var(--color__primary--contrast);
   padding: var(--padding);
@@ -156,30 +157,58 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: var(--margin--small) var(--margin--small) 0;
+}
+
+@media (min-width: 75rem) {
+  footer {
+    margin: var(--margin) 0 0;
+  }
 }
 
 header {
   background: var(--color__bg);
   -webkit-box-shadow: var(--background);
   box-shadow: var(--background);
-  margin-bottom: 20px;
+  margin: var(--margin--small);
+}
+
+@media (min-width: 75rem) {
+  header {
+    margin: var(--margin--small) 0 var(--margin);
+  }
 }
 
 .header__top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: var(--padding);
+  padding: var(--padding--small);
+}
+
+@media (min-width: 32.5rem) {
+  .header__top {
+    padding: var(--padding);
+  }
 }
 
 .header__logo {
   max-width: 200px;
-  margin: 0 20px;
+  min-width: 100px;
+  margin-right: 10px;
 }
 
-.header__right {
-  margin-left: 50px;
-  margin-top: 20px;
+@media (min-width: 32.5rem) {
+  .header__logo {
+    margin: 0 20px;
+  }
+}
+
+@media (min-width: 32.5rem) {
+  .header__right {
+    margin-left: 50px;
+    margin-top: 20px;
+  }
 }
 
 .header__title {
@@ -200,11 +229,24 @@ header {
   background: var(--color__bg);
   -webkit-box-shadow: var(--background);
   box-shadow: var(--background);
-  padding: var(--padding) var(--padding--wide);
+  padding: var(--padding--small);
+  margin: 0 var(--margin--small);
 }
 
 .content--no-padding {
   padding: 0;
+}
+
+@media (min-width: 47.5rem) {
+  .content {
+    padding: var(--padding) var(--padding--wide);
+  }
+}
+
+@media (min-width: 75rem) {
+  .content {
+    margin: 0;
+  }
 }
 
 .content__inner {
@@ -379,13 +421,19 @@ header {
   box-shadow: var(--background);
 }
 
-/*Flex items*/
 .teaser-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0 var(--margin--small);
+}
+
+@media (min-width: 75rem) {
+  .teaser-section {
+    margin: 0;
+  }
 }
 
 .teaser {
@@ -395,22 +443,22 @@ header {
   background: var(--color__bg);
   -webkit-box-shadow: var(--background);
   box-shadow: var(--background);
-  margin-top: 20px;
+  margin-top: var(--margin--small);
   margin-right: 0;
   width: 100%;
 }
 
-@media all and (min-width: 40em) {
+@media (min-width: 32.5rem) {
   .teaser {
-    width: 50%;
-    margin-right: 20px;
+    width: 49%;
+    margin-right: 2%;
   }
   .teaser:nth-child(2n) {
     margin-right: 0;
   }
 }
 
-@media all and (min-width: 60em) {
+@media (min-width: 47.5rem) {
   .teaser {
     width: 32.2%;
     margin-right: 1.7%;
@@ -420,6 +468,12 @@ header {
   }
   .teaser:nth-child(3n) {
     margin-right: 0;
+  }
+}
+
+@media (min-width: 75rem) {
+  .teaser {
+    margin-top: var(--margin);
   }
 }
 

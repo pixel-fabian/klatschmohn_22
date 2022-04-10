@@ -4,22 +4,37 @@ header {
   background: var(--color__bg);
   -webkit-box-shadow: var(--background);
   box-shadow: var(--background);
-  margin-bottom: 20px;
+  margin: var(--margin--small);
+
+  @include atLarge {
+    margin: var(--margin--small) 0 var(--margin);
+  }
 }
 
 .header__top {
   display: flex;
-  padding: var(--padding);
+  padding: var(--padding--small);
+
+  @include atSmall {
+    padding: var(--padding);
+  }
 }
 
 .header__logo {
   max-width: 200px;
-  margin: 0 20px;
+  min-width: 100px;
+  margin-right: 10px;
+
+  @include atSmall {
+    margin: 0 20px;
+  }
 }
 
 .header__right {
-  margin-left: 50px;
-  margin-top: 20px;
+  @include atSmall {
+    margin-left: 50px;
+    margin-top: 20px;
+  }
 }
 
 .header__title {
