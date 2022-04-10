@@ -142,6 +142,10 @@ p {
   line-height: 1.5;
 }
 
+i {
+  margin-right: 5px;
+}
+
 /* ==========================================================================
    Layout - styles defining the layout of the page
    ========================================================================== */
@@ -225,16 +229,27 @@ header {
 /* ==========================================================================
    Modules - independent modules, that can be used multiple times
    ========================================================================== */
+button {
+  border: none;
+  background: var(--color__primary);
+  color: var(--color__primary--contrast);
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  cursor: pointer;
+  padding: 14px 16px;
+}
+
+button:hover {
+  background: var(--color__secondary);
+  color: var(--color__secondary--contrast);
+}
+
 .content {
   background: var(--color__bg);
   -webkit-box-shadow: var(--background);
   box-shadow: var(--background);
   padding: var(--padding--small);
   margin: 0 var(--margin--small);
-}
-
-.content--no-padding {
-  padding: 0;
 }
 
 @media (min-width: 47.5rem) {
@@ -247,6 +262,10 @@ header {
   .content {
     margin: 0;
   }
+}
+
+.content--no-padding {
+  padding: 0;
 }
 
 .content__inner {
@@ -325,6 +344,12 @@ header {
   margin-right: 5px;
 }
 
+@media (min-width: 47.5rem) {
+  #nav-desktop__button {
+    display: none;
+  }
+}
+
 .nav-desktop {
   /** 2nd level */
 }
@@ -395,7 +420,13 @@ header {
 }
 
 .pagination {
-  margin-top: 20px;
+  margin: var(--margin) var(--margin--small);
+}
+
+@media (min-width: 75rem) {
+  .pagination {
+    margin: var(--margin) 0;
+  }
 }
 
 .pagination .page-numbers {

@@ -5,15 +5,15 @@
   padding: var(--padding--small);
   margin: 0 var(--margin--small);
 
-  &--no-padding {
-    padding: 0;
-  }
-
   @include atMedium {
     padding: var(--padding) var(--padding--wide);
   }
   @include atLarge {
     margin: 0;
+  }
+
+  &--no-padding {
+    padding: 0;
   }
 }
 

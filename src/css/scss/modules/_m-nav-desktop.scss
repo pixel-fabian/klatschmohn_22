@@ -1,3 +1,9 @@
+#nav-desktop__button {
+  @include atMedium {
+    display: none;
+  }
+}
+
 .nav-desktop {
   .menu {
     list-style-type: none;

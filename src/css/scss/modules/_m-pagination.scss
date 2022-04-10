@@ -1,5 +1,9 @@
 .pagination {
-  margin-top: 20px;
+  margin: var(--margin) var(--margin--small);
+
+  @include atLarge {
+    margin: var(--margin) 0;
+  }
 }
 
 .pagination .page-numbers {

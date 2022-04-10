@@ -106,6 +106,7 @@
           </div>
         </div>
         <nav>
+          <button id="nav-desktop__button" class="button"><i class="fa fa-bars" aria-hidden="true"></i>Menü</button>
           <?php wp_nav_menu(array('theme_location' => 'nav-desktop', 'container_class' => 'nav-desktop')); ?>
         </nav>
       </header>

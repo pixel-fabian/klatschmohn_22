@@ -1,0 +1,13 @@
+button {
+  border: none;
+  background: var(--color__primary);
+  color: var(--color__primary--contrast);
+  transition: background 0.3s;
+  cursor: pointer;
+  padding: 14px 16px;
+
+  &:hover {
+    background: var(--color__secondary);
+    color: var(--color__secondary--contrast);
+  }
+}
