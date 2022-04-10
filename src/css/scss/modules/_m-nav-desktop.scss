@@ -3,12 +3,57 @@
   font-size: 1em;
 }
 
+.nav-desktop {
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-item a {
+    transition: background 0.3s;
+    background: var(--color__primary);
+    color: var(--color__primary--contrast);
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    padding: 5px var(--padding--small);
+
+    &:hover,
+    &:focus {
+      background: var(--color__secondary);
+    }
+  }
+
+  .current-menu-item a {
+    background: var(--color__secondary);
+  }
+
+  .sub-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    .menu-item a {
+      padding: 5px var(--padding);
+    }
+  }
+}
+
 // Horizontal menu with dropdown
 @include atMedium {
   #nav-desktop__button {
     display: none;
   }
   .nav-desktop {
+    display: block;
+
     .menu {
       list-style-type: none;
       margin: 0;
@@ -23,21 +68,12 @@
     }
 
     .menu-item a {
-      transition: background 0.3s;
-      background: var(--color__primary);
-      color: var(--color__primary--contrast);
-      font-weight: 400;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-
-      &:hover,
-      &:focus {
-        background: var(--color__secondary);
-      }
     }
 
     /** 2nd level */

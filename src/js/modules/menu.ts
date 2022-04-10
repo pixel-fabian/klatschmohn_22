@@ -1,14 +1,21 @@
 class Menu {
-  constructor(menuClassName: string) {
-    console.log(menuClassName);
+  constructor(menuClassName: string, menuButtonId: string) {
+    // open submenu on focus
 
     const menuLinks = document.querySelectorAll(
       `${menuClassName} .menu-item-has-children a`,
     );
-
-    console.log('menuLinks', menuLinks);
-
     this.addFocusClass(menuLinks, 'expanded');
+
+    // open menu on button press (mobile)
+    const menuButton: HTMLElement = document.querySelector(menuButtonId);
+    const menu = document.querySelector(menuClassName);
+    console.log('menuButton', menuButton);
+    console.log('menu', menu);
+
+    menuButton.addEventListener('click', () => {
+      menu.classList.toggle('visible');
+    });
   }
 
   /**

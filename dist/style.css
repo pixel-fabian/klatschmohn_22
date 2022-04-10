@@ -383,11 +383,55 @@ button:hover {
   font-size: 1em;
 }
 
+.nav-desktop {
+  display: none;
+}
+
+.nav-desktop.visible {
+  display: block;
+}
+
+.nav-desktop .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-desktop .menu-item a {
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  background: var(--color__primary);
+  color: var(--color__primary--contrast);
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  padding: 5px var(--padding--small);
+}
+
+.nav-desktop .menu-item a:hover, .nav-desktop .menu-item a:focus {
+  background: var(--color__secondary);
+}
+
+.nav-desktop .current-menu-item a {
+  background: var(--color__secondary);
+}
+
+.nav-desktop .sub-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-desktop .sub-menu .menu-item a {
+  padding: 5px var(--padding);
+}
+
 @media (min-width: 47.5rem) {
   #nav-desktop__button {
     display: none;
   }
   .nav-desktop {
+    display: block;
     /** 2nd level */
   }
   .nav-desktop .menu {
@@ -404,11 +448,6 @@ button:hover {
     text-align: center;
   }
   .nav-desktop .menu-item a {
-    -webkit-transition: background 0.3s;
-    transition: background 0.3s;
-    background: var(--color__primary);
-    color: var(--color__primary--contrast);
-    font-weight: 400;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -421,9 +460,6 @@ button:hover {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  .nav-desktop .menu-item a:hover, .nav-desktop .menu-item a:focus {
-    background: var(--color__secondary);
   }
   .nav-desktop .sub-menu {
     list-style-type: none;
