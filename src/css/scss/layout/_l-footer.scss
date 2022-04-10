@@ -17,3 +17,11 @@ footer {
     margin: var(--margin) 0 0;
   }
 }
+
+.footer__item {
+  flex: 1 1 0;
+  margin-bottom: var(--margin);
+  @include atSmall {
+    margin-bottom: 0;
+  }
+}

@@ -183,6 +183,19 @@ footer {
   }
 }
 
+.footer__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  margin-bottom: var(--margin);
+}
+
+@media (min-width: 32.5rem) {
+  .footer__item {
+    margin-bottom: 0;
+  }
+}
+
 header {
   background: var(--color__bg);
   -webkit-box-shadow: var(--background);
