@@ -18,7 +18,10 @@
 }
 
 .content__inner {
-  padding: var(--padding) var(--padding--wide);
+  padding: var(--padding--small);
+  @include atMedium {
+    padding: var(--padding) var(--padding--wide);
+  }
 }
 
 .content__title {

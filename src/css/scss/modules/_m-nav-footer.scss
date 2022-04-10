@@ -1,14 +1,12 @@
-.nav-footer__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+.nav-footer {
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
-.nav-footer__link {
-  color: var(--color__primary--contrast);
-  font-weight: 400;
-}
-
-.nav-footer__link .fa {
-  margin-right: 5px;
+  .menu-item a {
+    color: var(--color__primary--contrast);
+    font-weight: 400;
+  }
 }

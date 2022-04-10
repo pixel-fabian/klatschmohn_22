@@ -12,8 +12,7 @@ add_filter( 'wp_headers', 'AH_remove_x_pingback' );
 /* Register menues */
 function register_my_menus() {
     register_nav_menus(
-            array('nav-desktop' => __('Desktopmenü'),
-                'nav-mobile' => __('Mobilemenü'),
+            array('nav-desktop' => __('Hauptmenü'),
                 'nav-footer' => __('Footermenü'))
     );
 }
@@ -30,3 +29,26 @@ function custom_excerpt_length( $length ) {
     return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+/** register widgets **/
+if (function_exists('register_sidebar')) {
+    register_sidebar(array(
+        'name' => 'Footer links',
+        'id' => 'footer_left',
+        'description' => 'Widget für den Footer',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<strong>',
+        'after_title' => '</strong>'
+    ));
+
+    register_sidebar(array(
+        'name' => 'Footer rechts',
+        'id' => 'footer_right',
+        'description' => 'Widget für den Footer',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<strong>',
+        'after_title' => '</strong>'
+    ));
+}
