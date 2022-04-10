@@ -353,11 +353,22 @@ header {
 }
 
 .pagination {
-  background: var(--color__bg);
+  margin-top: 20px;
+}
+
+.pagination .page-numbers {
+  padding: 10px;
+  background: var(--color__primary);
+  color: var(--color__primary--contrast);
   -webkit-box-shadow: var(--background);
   box-shadow: var(--background);
-  padding: var(--padding--small);
-  margin-top: 20px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.pagination .page-numbers:hover, .pagination .page-numbers.current {
+  background: var(--color__secondary);
+  color: var(--color__secondary--contrast);
 }
 
 .side-box {
