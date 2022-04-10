@@ -34,24 +34,20 @@
 
       <?php $total_pages = $posts->max_num_pages;
       if ($total_pages > 1) { ?>
-
-      <div class="pagination">
-
-        <?php $current_page = max(1, $paged);
-
-        echo paginate_links(array(
-            'base' => get_pagenum_link(1) . '%_%',
-            'format' => '/page/%#%',
-            'current' => $current_page,
-            'total' => $total_pages,
-            'prev_text'    => __('« Vorherige Seite'),
-            'next_text'    => __('Nächste Seite »'),
-        ));
-
-      }
-    ?> </div>
-    <?php wp_reset_postdata(); ?>
-    <?php endif; ?> 
+        <div class="pagination">
+          <?php $current_page = max(1, $paged);
+          echo paginate_links(array(
+              'base' => get_pagenum_link(1) . '%_%',
+              'format' => '/page/%#%',
+              'current' => $current_page,
+              'total' => $total_pages,
+              'prev_text'    => __('« Vorherige Seite'),
+              'next_text'    => __('Nächste Seite »'),
+          ));
+        ?> </div>
+      <?php }
+    wp_reset_postdata();
+    endif; ?> 
 
   </main>
 
