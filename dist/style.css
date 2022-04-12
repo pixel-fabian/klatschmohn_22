@@ -10,6 +10,22 @@ Author URI: http://fabian-kurz.de
 /* ==========================================================================
    Base - general styles, font-face, helpers
    ========================================================================== */
+.iframe--16x9 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.iframe--16x9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 :root {
   --color__primary: #003255;
   --color__primary--contrast: #ffffff;
