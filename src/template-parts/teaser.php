@@ -11,7 +11,7 @@
         <?php the_excerpt(); ?>
       </div>
     </a>
-    <?php if (get_the_category($id)[0]->name != 'Uncategorized') { ?>
+    <?php if (get_the_category($id)[0]->name != 'Uncategorized' && get_the_category($id)[0]->name != 'Aktuelles') { ?>
       <div class="teaser__meta">
         <span
           >Kategorie: <a href="<?php echo esc_url(get_category_link(get_the_category($id)[0]->term_id)) ?>" class="link--effect"><?php echo get_the_category($id)[0]->name ?></a></span
